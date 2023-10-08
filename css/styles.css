@@ -97,7 +97,7 @@ address {
 }
 
 .nav-menu-btn {
-  background-color: red;
+  background-color: transparent;
   border: none;
   outline: none;
   display: flex;
@@ -112,8 +112,6 @@ address {
 }
 
 .nav-menu-btn-icon {
-  fill: green;
-  background-color: #31d0aa;
 }
 
 .nav-menu-list {
