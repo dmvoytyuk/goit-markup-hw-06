@@ -24,7 +24,7 @@ ol {
 }
 
 .header {
-  margin: 0 auto;
+  /* margin: 0 auto; */
   border-bottom: 1px solid #e7e9fc;
   box-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08),
     0px 1px 1px 0px rgba(46, 47, 66, 0.16),
@@ -32,11 +32,9 @@ ol {
 }
 
 .container {
-  /* outline: 1px solid red; */
-  width: 1158px;
   margin: 0 auto;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: 16px;
+  padding-right: 16px;
 }
 
 .section {
@@ -44,14 +42,14 @@ ol {
   padding-bottom: 120px;
 }
 
-.header-container {
-  display: flex;
-}
+/********************************************************/
+/*                       HEADER                         */
+/********************************************************/
 
 .nav-menu {
   display: flex;
   align-items: center;
-  margin-right: auto;
+  justify-content: space-between;
 }
 
 .nav-menu-logo {
@@ -63,16 +61,27 @@ ol {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   text-decoration: none;
-  margin-right: 76px;
+  /* margin-right: 76px; */
+  padding: 17px 0;
 }
 
 .logo-word {
   color: #2e2f42;
 }
 
-.nav-menu-list {
-  list-style-type: none;
+.nav-menu-btn {
   display: flex;
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+.nav-menu-btn-icon {
+}
+
+.nav-menu-list {
+  display: none;
+  list-style-type: none;
   gap: 40px;
 }
 
@@ -108,20 +117,15 @@ ol {
   background-color: #404bbf;
 }
 
-address {
+.contacts {
+  display: none;
   font-style: normal;
 }
 
 .contacts-list {
-  display: flex;
-  gap: 40px;
+  /* display: flex;
+  gap: 40px; */
   list-style-type: none;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
-  padding-top: 24px;
-  padding-bottom: 24px;
 }
 
 .contacts-link {
@@ -135,6 +139,79 @@ address {
   color: #404bbf;
 }
 
+/*nav bar responsive design */
+
+@media (min-width: 320px) {
+  .container {
+    min-width: 320px;
+  }
+
+  .header {
+    height: 56px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+
+  .header {
+    height: 70px;
+  }
+
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .nav-menu-logo {
+    margin-right: 120px;
+  }
+
+  .nav-menu-btn {
+    display: none;
+  }
+
+  .nav-menu-list {
+    display: flex;
+  }
+
+  .contacts {
+    display: block;
+  }
+  .contacts-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+  }
+}
+
+@media (min-width: 1158px) {
+  .container {
+    width: 1158px;
+  }
+
+  .contacts-list {
+    flex-direction: row;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    gap: 40px;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+  }
+}
+
+/********************************************************/
+/*                    HERO SECTION                      */
+/********************************************************/
+
 .hero {
   background-color: #2e2f42;
   background-image: linear-gradient(
@@ -145,21 +222,20 @@ address {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  padding: 188px 0;
-  max-width: 1440px;
+  /* max-width: 1440px; */
   margin: 0 auto;
 }
 
 .hero-text {
   margin: 0 auto;
-  max-width: 496px;
+  text-align: center;
+  /* max-width: 496px;
   color: #fff;
   font-size: 56px;
   font-weight: 700;
   line-height: 1.07;
   letter-spacing: 0.02em;
-  text-align: center;
-  margin-bottom: 48px;
+  margin-bottom: 48px; */
 }
 
 .hero-btn {
@@ -186,18 +262,43 @@ address {
   background-color: #404bbf;
 }
 
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
+@media (min-width: 320px) {
+  .hero {
+    background-color: #2e2f42;
+    background-image: linear-gradient(
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    );
+    padding-top: 72px;
+    padding-bottom: 72px;
+  }
 
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
+  .hero-text {
+    max-width: 200px;
+    color: #fff;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.11;
+    letter-spacing: 0.02em;
+    margin-bottom: 72px;
+  }
+}
+
+@media (min-width: 768px) {
+  .hero {
+    padding-top: 112px;
+    padding-bottom: 112px;
+  }
+
+  .hero-text {
+    max-width: 496px;
+    color: #fff;
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 1.07;
+    letter-spacing: 0.02em;
+    margin-bottom: 36px;
+  }
 }
 
 .studio-list {
@@ -558,8 +659,6 @@ address {
 
 .backdrop {
   visibility: hidden;
-  opacity: 0;
-  pointer-events: none;
   position: fixed;
   top: 0;
   left: 0;
@@ -738,12 +837,25 @@ address {
   fill: #f4f4fd;
 }
 
-.is-open {
-  visibility: visible;
-  opacity: 100%;
-  pointer-events: all;
-}
-
 .user-privacy {
   color: #4d5ae5;
+}
+
+/* HELP STYLES */
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.is-open {
+  visibility: visible;
 }
