@@ -280,8 +280,6 @@ address {
   align-items: center;
   gap: 72px;
   list-style-type: none;
-
-  /* gap: 24px; */
 }
 
 .team-item {
@@ -292,8 +290,6 @@ address {
   box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
     0px 1px 1px 0px rgba(46, 47, 66, 0.16),
     0px 1px 6px 0px rgba(46, 47, 66, 0.08);
-
-  /* width: calc((100% - 3 * 24px) / 4); */
 }
 
 .team-item-text-box {
@@ -369,12 +365,7 @@ address {
 .portfolio-item {
   width: 100%;
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  /* width: calc((100% - 2 * 24px) / 3); */
 }
-
-/* .portfolio-item:nth-child(n + 4) {
-  margin-bottom: 0;
-} */
 
 .portfolio-item:hover .portfolio-item-cover-text,
 .portfolio-item:focus .portfolio-item-cover-text {
@@ -682,8 +673,6 @@ address {
 
   display: flex;
   align-items: center;
-
-  /* display: block; */
 }
 
 .modal-form-wrap {
@@ -951,6 +940,12 @@ address {
   .hero {
     padding-top: 188px;
     padding-bottom: 188px;
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url("../images/people-office.jpg");
+    max-width: 1440px;
   }
 
   .studio-item {
