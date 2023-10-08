@@ -33,25 +33,34 @@ ol {
 
 .container {
   /* outline: 1px solid red; */
-  width: 1158px;
-  margin: 0 auto;
-  padding-left: 15px;
-  padding-right: 15px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 16px;
+  padding-right: 16px;
 }
 
 .section {
+  padding-top: 96px;
+  padding-bottom: 96px;
+}
+
+/* .section {
   padding-top: 120px;
   padding-bottom: 120px;
-}
+} */
 
 .header-container {
   display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .nav-menu {
   display: flex;
   align-items: center;
-  margin-right: auto;
+  justify-content: space-between;
+  /* margin-right: auto; */
 }
 
 .nav-menu-logo {
@@ -68,6 +77,20 @@ ol {
 
 .logo-word {
   color: #2e2f42;
+}
+
+.nav-menu-btn {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  height: 24px;
+  width: 24px;
+  margin-bottom: 16px;
+  margin-top: 16px;
 }
 
 .nav-menu-list {
@@ -136,30 +159,37 @@ address {
 }
 
 .hero {
+  margin: 0 auto;
+  padding-top: 72px;
+  padding-bottom: 72px;
   background-color: #2e2f42;
-  background-image: linear-gradient(
-      rgba(46, 47, 66, 0.7),
-      rgba(46, 47, 66, 0.7)
-    ),
-    url("../images/people-office.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  padding: 188px 0;
-  max-width: 1440px;
-  margin: 0 auto;
+  /* background-image: linear-gradient(
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url("../images/people-office.jpg"); */
+  /* padding: 188px 0;
+  max-width: 1440px; */
 }
 
 .hero-text {
   margin: 0 auto;
-  max-width: 496px;
   color: #fff;
-  font-size: 56px;
   font-weight: 700;
-  line-height: 1.07;
-  letter-spacing: 0.02em;
   text-align: center;
   margin-bottom: 48px;
+  max-width: 180px;
+  font-size: 36px;
+  line-height: 1.11;
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+
+  /* max-width: 496px;
+  font-size: 56px;
+  line-height: 1.07; */
 }
 
 .hero-btn {
@@ -186,32 +216,21 @@ address {
   background-color: #404bbf;
 }
 
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}
-
 .studio-list {
   display: flex;
-  gap: 24px;
+  flex-direction: column;
   list-style-type: none;
+  gap: 72px;
+  /* gap: 24px; */
 }
 
 .studio-item {
-  width: calc((100% - 3 * 24px) / 4);
+  width: 100%;
+  /* width: calc((100% - 3 * 24px) / 4); */
 }
 
 .studio-icon-box {
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
   height: 112px;
@@ -219,22 +238,30 @@ address {
   border: 1px solid #8e8f99;
   border-radius: 4px;
   margin-bottom: 8px;
+  /* display: flex; */
 }
 
 .studio-item-title {
+  text-align: center;
   color: #2e2f42;
-  font-size: 20px;
-  font-weight: 500;
-  line-height: 1.2;
-  letter-spacing: 0.02em;
   margin-bottom: 8px;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.11;
+  letter-spacing: 0.02em;
+
+  /* font-size: 20px;
+  font-weight: 500;
+  line-height: 1.2; */
 }
 
 .studio-item-text {
   font-size: 16px;
-  font-weight: 400;
+  font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.02em;
+
+  /* font-weight: 400; */
 }
 
 .team {
@@ -738,38 +765,72 @@ address {
   fill: #f4f4fd;
 }
 
+.user-privacy {
+  color: #4d5ae5;
+}
+
+/****************************************/
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 .is-open {
   visibility: visible;
   opacity: 100%;
   pointer-events: all;
 }
 
-.user-privacy {
-  color: #4d5ae5;
-}
+/***************************************/
 
 @media (min-width: 320px) {
   body {
     overflow-y: hidden;
   }
   .container {
-    width: 320px;
+    max-width: 320px;
   }
 
-  .section {
-    padding-top: 96px;
-    padding-bottom: 96px;
+  .nav-menu-list {
+    display: none;
+  }
+
+  .contacts {
+    display: none;
+  }
+
+  .hero {
+  }
+
+  .studio-list {
   }
 }
 
 @media (min-width: 768px) {
+  body {
+    overflow-y: visible;
+  }
+
   .container {
-    width: 768px;
+    max-width: 768px;
+  }
+
+  .nav-menu-btn {
+    display: none;
   }
 }
 
 @media (min-width: 1158px) {
   .container {
-    width: 1158px;
+    max-width: 1158px;
   }
 }
