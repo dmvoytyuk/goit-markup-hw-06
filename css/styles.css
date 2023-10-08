@@ -111,7 +111,8 @@ address {
 }
 
 .nav-menu-btn-icon {
-  /* fill: #000; */
+  fill: green;
+  background-color: #31d0aa;
 }
 
 .nav-menu-list {
