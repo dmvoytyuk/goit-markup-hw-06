@@ -799,7 +799,7 @@ address {
 
 @media (min-width: 320px) {
   body {
-    overflow-y: hidden;
+    /* overflow-y: hidden; */
   }
   .container {
     max-width: 320px;
