@@ -479,12 +479,20 @@ address {
 }
 
 .footer-wrap {
+  width: max-content;
   display: flex;
   flex-direction: column;
-  gap: 72px;
   align-items: center;
+  gap: 72px;
 
   /* align-items: baseline; */
+}
+
+.footer-left-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 72px;
 }
 
 .footer-left {
@@ -558,10 +566,6 @@ address {
 .footer-social-link:hover,
 .footer-social-link:focus {
   background-color: #31d0aa;
-}
-
-.footer-right {
-  /* margin-right: 80px; */
 }
 
 .footer-subscribe {
@@ -913,13 +917,14 @@ address {
   }
 
   .footer-wrap {
-    width: max-content;
-    flex-direction: row;
-    flex-wrap: wrap;
     justify-content: center;
     align-items: baseline;
-    column-gap: 24px;
-    row-gap: 72px;
+  }
+
+  .footer-left-wrap {
+    flex-direction: row;
+    align-items: baseline;
+    gap: 24px;
   }
 
   .footer-social-text {
@@ -937,9 +942,6 @@ address {
 
   .footer-form-label {
     width: 264px;
-  }
-  .footer-subscribe-empty {
-    /* width: 20%; */
   }
 }
 
