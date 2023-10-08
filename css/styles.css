@@ -5,12 +5,16 @@ body {
 }
 
 /* hide scrollbar */
-body::-webkit-scrollbar {
+/* body::-webkit-scrollbar {
   display: none;
 }
 
 html {
   scrollbar-width: none;
+} */
+
+body {
+  overflow-x: hidden;
 }
 
 h1,
@@ -114,7 +118,6 @@ address {
   display: none;
   list-style-type: none;
   gap: 40px;
-
   /* display: flex; */
 }
 
