@@ -844,6 +844,9 @@ address {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.tel-color {
+  color: #4d5ae5;
+}
 .mobile-menu-contacts-link:hover,
 .mobile-menu-contacts-link:focus {
   color: #4d5ae5;
