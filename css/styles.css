@@ -779,6 +779,7 @@ address {
   opacity: 0%;
   pointer-events: none;
 
+  overflow-y: auto;
   position: fixed;
   top: 0px;
   left: 0px;
@@ -992,6 +993,10 @@ address {
 
   .modal-form-label {
     display: block;
+  }
+
+  .mobile-menu {
+    display: none;
   }
 }
 
