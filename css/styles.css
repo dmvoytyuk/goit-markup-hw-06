@@ -389,11 +389,6 @@ address {
   overflow: hidden;
 }
 
-.tablet-img,
-.desktop-img {
-  display: none;
-}
-
 .portfolio-item-cover-text {
   position: absolute;
   background-color: #4d5ae5;
@@ -890,11 +885,6 @@ address {
   .container {
     max-width: 320px;
   }
-
-  .tablet-img,
-  .desktop-img {
-    display: none;
-  }
 }
 
 /**************************************/
@@ -969,15 +959,6 @@ address {
     flex-wrap: wrap;
     row-gap: 72px;
     column-gap: 24px;
-  }
-
-  .tablet-img {
-    display: block;
-  }
-
-  .mobile-img,
-  .desktop-img {
-    display: none;
   }
 
   .footer-wrap {
@@ -1088,15 +1069,6 @@ address {
     row-gap: 48px;
   }
 
-  .desktop-img {
-    display: block;
-  }
-
-  .mobile-img,
-  .tablet-img {
-    display: none;
-  }
-
   .footer {
     padding: 100px 0;
   }
@@ -1117,6 +1089,8 @@ address {
     border-color: #fff;
   }
 }
+
+/*******************************************/
 
 @media (min-resolution: 192dpi) and (min-width: 320px) {
   .hero {
